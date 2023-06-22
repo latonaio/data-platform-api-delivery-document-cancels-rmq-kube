@@ -6,7 +6,7 @@
 	"api_status_code": 200,
 	"runtime_session_id": "boi9ar543dg91ipdnspi099u231280ab0v8af0ew",
 	"business_partner": 101,
-	"service_label": "FUNCTION_ORDERS_CANCELS",
+	"service_label": "DELIVERY_DOCUMENT",
 	"api_type": "cancels",
 	"DeliveryDocument": {
 		"DeliveryDocument": 80000001,
