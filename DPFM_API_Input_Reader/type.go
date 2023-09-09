@@ -63,24 +63,20 @@ type SDC struct {
 	BusinessPartner  int              `json:"business_partner"`
 	ServiceLabel     string           `json:"service_label"`
 	APIType          string           `json:"api_type"`
-	DeliveryDocument DeliveryDocument `json:"DeliveryDocument"`
+	Header 			 Header			  `json:"DeliveryDocument"`
 	APISchema        string           `json:"api_schema"`
 	Accepter         []string         `json:"accepter"`
 	Deleted          bool             `json:"deleted"`
 }
-type DeliveryDocument struct {
+type Header struct {
 	DeliveryDocument     int     `json:"DeliveryDocument"`
 	HeaderDeliveryStatus *string `json:"HeaderDeliveryStatus"`
 	IsCancelled          *bool   `json:"IsCancelled"`
 	Item                 []Item  `json:"Item"`
 }
+
 type Item struct {
-	DeliveryDocumentItem int                  `json:"DeliveryDocumentItem"`
-	ItemDeliveryStatus   *string              `json:"ItemDeliveryStatus"`
-	IsCancelled          *bool                `json:"IsCancelled"`
-	ItemSchedulingLine   []ItemSchedulingLine `json:"ItemSchedulingLine"`
-}
-type ItemSchedulingLine struct {
-	ScheduleLine int   `json:"ScheduleLine"`
-	IsCancelled  *bool `json:"IsCancelled"`
+	DeliveryDocument   		int     `json:"DeliveryDocument"`
+	DeliveryDocumentItem	int     `json:"DeliveryDocumentItem"`
+	IsCancelled        		*bool   `json:"IsCancelled"`
 }
